@@ -1,6 +1,7 @@
-import sum from "./function/sum";
+import "./styles/_custom.scss"
+import "bootstrap/scss/bootstrap.scss";
 
-console.log(sum());
-console.log(process.env.NODE_ENV);
-let bang = document.querySelector(".bang");
-bang.innerHTML = sum();
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
