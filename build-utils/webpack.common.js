@@ -3,13 +3,34 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/main.js',
     module: {
         rules: [
+          {
+            test: /\.html$/,
+            exclude: /node_modules/,
+            use: ['html-loader'],
+          },
           {
             test: /\.(js)$/,
             exclude: /node_modules/,
             use: ['babel-loader']
+          },
+          {
+            test: /\.(gif|png|jpe?g|svg)$/i,
+            use: [
+              "file-loader",
+              {
+                loader: "image-webpack-loader",
+                options: {
+                  bypassOnDebug: true,
+                },
+              },
+            ],
+          },
+          {
+            test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
+            loader: "file-loader"
           },
           {
             test: /\.(scss)$/,
@@ -39,7 +60,6 @@ module.exports = {
       plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-          title: 'Hello Webpack bundled JavaScript Project',
           template: './src/index.html'
         })
       ],
