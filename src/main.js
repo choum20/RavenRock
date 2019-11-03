@@ -1,3 +1,6 @@
+import "@webcomponents/custom-elements";
+import "@webcomponents/webcomponentsjs";
+
 import "./styles/_custom.scss"
 import "bootstrap/scss/bootstrap.scss";
 

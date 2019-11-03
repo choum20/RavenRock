@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -9,7 +10,7 @@ module.exports = {
           {
             test: /\.html$/,
             exclude: /node_modules/,
-            use: ['html-loader'],
+            use: ['html-loader']
           },
           {
             test: /\.(js)$/,
@@ -61,7 +62,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
           template: './src/index.html'
-        })
+        }),
+        new webpack.IgnorePlugin(/vertx/)
       ],
     output: {
       path: path.resolve(__dirname, '../', 'dist'),
