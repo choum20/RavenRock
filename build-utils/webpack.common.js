@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './src/main.js',
+    externals: {
+      jquery: 'jQuery'
+    },
     module: {
         rules: [
           {
@@ -63,7 +66,17 @@ module.exports = {
         new HtmlWebpackPlugin({
           template: './src/index.html'
         }),
-        new webpack.IgnorePlugin(/vertx/)
+        new webpack.IgnorePlugin(/vertx/),
+        new GoogleFontsPlugin({
+          fonts: [
+              { family: "Open Sans" },
+              { family: "Montserrat", variants: [ "400", "700italic" ] }
+          ]
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      })
       ],
     output: {
       path: path.resolve(__dirname, '../', 'dist'),

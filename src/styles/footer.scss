@@ -1,0 +1,34 @@
+
+footer {
+	padding: 40px 0 0 0;
+	background: #444;
+	color: #aaa;
+	text-align: left;
+}
+
+.footer-left a { color: #ddd; border-bottom: 1px dashed #ddd; }
+.footer-left a:hover, .footer-left a:focus { color: #ddd; border: 0; }
+
+.footer-right {
+	text-align: right;
+}
+
+.footer-right a {
+	margin: 0 6px;
+    font-size: 32px;
+    color: #aaa;
+}
+.footer-right a:hover, .footer-right a:focus { color: #eee; }
+
+.footer-bottom {
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.footer-bottom a {
+	font-size: 32px;
+    color: #666;
+    line-height: 40px;
+}
+
+.footer-bottom a:hover, .footer-bottom a:focus { color: #888; }
