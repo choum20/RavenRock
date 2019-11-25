@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const GoogleFontsPlugin = require('google-fonts-plugin');
 
 module.exports = {
     entry: './src/main.js',
