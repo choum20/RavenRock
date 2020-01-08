@@ -81,8 +81,4 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
  
-    /* logo */
-    .navbar-brand {
-        background-image: url(../images/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 136px 39px !important;
-    } 
 }
