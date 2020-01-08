@@ -1,7 +1,10 @@
 import "@webcomponents/custom-elements";
 import "@webcomponents/webcomponentsjs";
 
-import "bootstrap/scss/bootstrap.scss";
+//import "bootstrap";
+
+import "bootstrap/dist/css/bootstrap.css";
+import "animate.css/animate.css";
 
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'

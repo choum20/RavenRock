@@ -12,6 +12,16 @@ module.exports = {
     module: {
         rules: [
           {
+            test: require.resolve('jquery'),
+            use: [{
+                loader: 'expose-loader',
+                options: 'jQuery'
+            },{
+                loader: 'expose-loader',
+                options: '$'
+            }]
+          },
+          {
             test: /\.html$/,
             exclude: /node_modules/,
             use: ['html-loader']
@@ -38,7 +48,7 @@ module.exports = {
             loader: "file-loader"
           },
           {
-            test: /\.(scss)$/,
+            test: /\.(sa|sc|c)ss$/,
             use: [{
               loader: 'style-loader', // inject CSS to page
             }, {
@@ -75,7 +85,7 @@ module.exports = {
           ]
       }),
       new webpack.ProvidePlugin({
-        $: 'jquery',
+        $: "jquery",
         jQuery: 'jquery'
       })
       ],

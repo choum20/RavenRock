@@ -35,6 +35,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "dotenv-webpack": "^1.7.0",
+    "expose-loader": "^0.7.5",
     "file-loader": "^4.2.0",
     "google-fonts-plugin": "^5.0.2",
     "html-loader": "^0.5.5",
@@ -53,6 +54,7 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
     "google-fonts-webpack-plugin": "^0.4.4",
     "jquery": "^3.4.1",
