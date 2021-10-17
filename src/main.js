@@ -2,6 +2,8 @@ import "@webcomponents/custom-elements";
 import "@webcomponents/webcomponentsjs";
 
 //import "bootstrap";
+import 'jquery';  
+import 'bootstrap/dist/js/bootstrap.js';
 
 import "bootstrap/dist/css/bootstrap.css";
 import "animate.css/animate.css";

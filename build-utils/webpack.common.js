@@ -6,9 +6,6 @@ const GoogleFontsPlugin = require('google-fonts-plugin');
 
 module.exports = {
     entry: ["regenerator-runtime/runtime.js", './src/main.js'],
-    externals: {
-      jquery: 'jQuery'
-    },
     module: {
         rules: [
           {
@@ -86,7 +83,8 @@ module.exports = {
       }),
       new webpack.ProvidePlugin({
         $: "jquery",
-        jQuery: 'jquery'
+        jQuery: 'jquery',        
+        "window.jQuery": "jquery"
       })
       ],
     output: {
