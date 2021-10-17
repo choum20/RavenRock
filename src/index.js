@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime'
 import "./app/menu/Menu";
 import "./app/accueil/Accueil";
 import "./app/services/Services";

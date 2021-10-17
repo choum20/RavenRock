@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const GoogleFontsPlugin = require('google-fonts-plugin');
 
 module.exports = {
-    entry: './src/main.js',
+    entry: ["regenerator-runtime/runtime.js", './src/main.js'],
     externals: {
       jquery: 'jQuery'
     },
